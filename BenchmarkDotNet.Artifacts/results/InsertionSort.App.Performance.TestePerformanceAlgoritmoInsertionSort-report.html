@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>InsertionSort.App.Performance.TestePerformanceAlgoritmoInsertionSort-20231128-074128</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.3693/22H2/2022Update)
+Intel Core i7-10510U CPU 1.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.404
+  [Host]     : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                 Method</th><th>  Array</th><th>          Mean</th><th>       Error</th><th>      StdDev</th><th>        Median</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>MedirPerformanceInsertionSort</td><td>Int32[100000]</td><td>100,408.537 ns</td><td>530.2659 ns</td><td>442.7960 ns</td><td>100,443.494 ns</td><td>7</td><td>-</td>
+</tr><tr><td>MedirPerformanceBubbleSort</td><td>Int32[100000]</td><td>3,692,133,146.154 ns</td><td>26,653,790.4489 ns</td><td>22,257,122.1811 ns</td><td>3,686,504,900.000 ns</td><td>10</td><td>600 B</td>
+</tr><tr><td>MedirPerformanceInsertionSort</td><td>Int32[10000]</td><td>9,964.832 ns</td><td>155.6495 ns</td><td>145.5946 ns</td><td>9,942.171 ns</td><td>6</td><td>-</td>
+</tr><tr><td>MedirPerformanceBubbleSort</td><td>Int32[10000]</td><td>36,639,961.429 ns</td><td>326,942.3144 ns</td><td>305,822.0438 ns</td><td>36,603,700.000 ns</td><td>9</td><td>43 B</td>
+</tr><tr><td>MedirPerformanceInsertionSort</td><td>Int32[1000]</td><td>986.409 ns</td><td>9.4241 ns</td><td>7.3577 ns</td><td>988.459 ns</td><td>4</td><td>-</td>
+</tr><tr><td>MedirPerformanceBubbleSort</td><td>Int32[1000]</td><td>372,929.548 ns</td><td>3,337.6481 ns</td><td>2,958.7381 ns</td><td>372,402.246 ns</td><td>8</td><td>-</td>
+</tr><tr><td>MedirPerformanceInsertionSort</td><td>Int32[100]</td><td>104.724 ns</td><td>2.0950 ns</td><td>2.1514 ns</td><td>104.011 ns</td><td>3</td><td>-</td>
+</tr><tr><td>MedirPerformanceBubbleSort</td><td>Int32[100]</td><td>3,896.600 ns</td><td>30.7276 ns</td><td>27.2393 ns</td><td>3,901.847 ns</td><td>5</td><td>-</td>
+</tr><tr><td>MedirPerformanceInsertionSort</td><td>Int32[10]</td><td>9.384 ns</td><td>0.1197 ns</td><td>0.1061 ns</td><td>9.383 ns</td><td>1</td><td>-</td>
+</tr><tr><td>MedirPerformanceBubbleSort</td><td>Int32[10]</td><td>40.923 ns</td><td>1.0620 ns</td><td>2.9251 ns</td><td>39.507 ns</td><td>2</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
